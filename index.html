@@ -1,61 +1,98 @@
 <!DOCTYPE html>
-    <html lang="en" class="no-js">
+<html lang="en" class="no-js">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Steve's Place</title>   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/6.5.95/css/materialdesignicons.min.css" integrity="sha512-Zw6ER2h5+Zjtrej6afEKgS8G5kehmDAHYp9M2xf38MPmpUWX39VrYmdGtCrDQbdLQrTnBVT8/gcNhgS4XPgvEg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/new.css">   
+    <title>Steve's Place</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/6.5.95/css/materialdesignicons.min.css"
+        integrity="sha512-Zw6ER2h5+Zjtrej6afEKgS8G5kehmDAHYp9M2xf38MPmpUWX39VrYmdGtCrDQbdLQrTnBVT8/gcNhgS4XPgvEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="./css/new.css">    -->
+    <link rel="stylesheet" href="./css/syle.css">
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
-    
+
 </head>
 
 <body onload="loadNav()">
-    <div id="mainWrap" class="mainwrap">
-        <div id="navwrap" class="nav hamburger">
-            <ul>
-                <li class="navButton"><button class="main button " type="button" >home</button></li>
-                <li class="navButton"><button class="one button " type="button" >one</button></li>
-                <li class="navButton"><button class="two button" type="button" >two</button></li>
-                <li class="navButton"><button class="three button" type="button" >three</button></li>
-                <li class="navButton"><button class="four button" type="button" >four</button></li>
-                <li class="navButton"><button class="five button" type="button" >five</button></li>
-            </ul>
+    <div id="mainWrap" class="">
+        <div id="header">
+            <div id="navwrap" class="nav hamburger">
+                <ul class="menue">
+                    <li class="navButton"><a class="home button"href="#home">home</a> 
+                    </li>
+                    <li class="navButton"><a class="codding button " href="#coding">Coding</a>
+                          </li>
+                    <li class="navButton"><a class="construction button"href="#construction">
+                            Contructrion</a></li>
+                    <li class="navButton"><a class="creative button"href="#creative">Creative</a>
+                            </li>
+                    <li class="navButton"><a class="four button"href="#four">four</a> 
+                    </li>
+                    <li class="navButton"><a class="five button"href="#five">five</a> 
+                    </li>
+                </ul>
+            </div>
 
-    </div>
-    <div class="mainImage"><img class="img" src="./img/mainimage.jpg" alt=""> </div>
-    <div class="main" id="home">
-        <!-- <div class="header">
+
+            <div class="main " id="homewrap">
+                <!-- <div class="header">
             <h1>Section main</h1>
         </div> -->
-        <section id="one" class="body">
-            <span class="header"><h1>Section one</h1></span>
-        </section>
-        <section id="two" class="body">
-            <span class="header"><h1>Section two</h1></span>
-        </section>
-        <section id="three" class="body">
-            <span class="header"><h1>Section three</h1></span>
-        </section>
-        <section id="four" class="body">
-            <span class="header"><h1>Section four</h1></span>
-        </section>
-        <section id="five" class="body">
-            <span class="header"><h1>Section five</h1></span>
-        </section>
-    </div>
-    </div>
-    <div class="footer">
-        <div class="inside">
-            <button class= "call">Call Anytime</button>
-            <div id="result"></div>
-        <div class="contact"></div>
+                <section id="home" class="body">
+                    <span class="header">
+                        <h1>Section one</h1>
+                    </span>
+                    <div id="homeresult"></div>
+                    <div class="mainhero">
+                        <div class="mainImage"><img class="img" src="./img/mainimage.jpg" alt=""> </div>
+                    </div>
+                </section>
+                <section id="coding" class="body">
+                    <span class="header">
+                        <h1>Section two</h1>
+                    </span>
+                    <div id="codingresult"></div>
+                </section>
+                <section id="construction" class="body">
+                    <span class="header">
+                        <h1>Section three</h1>
+                    </span>
+                    <div id="constructionresult"></div>
+                </section>
+                <section id="creative" class="body">
+                    <span class="header">
+                        <h1>Section four</h1>
+                    </span>
+                    <div id="creativeresult"></div>
+                </section>
+                <section id="four" class="body">
+                    <span class="header">
+                        <h1>Section five</h1>
+                    </span>
+                    <div id="fourresult"></div>
+                </section>
+                <section id="five" class="body">
+                    <span class="header">
+                        <h1>Section five</h1>
+                    </span>
+                    <div id="fiveresult"></div>
+                </section>
+            </div>
         </div>
-        
+        <div class="footer">
+            <div class="inside">
+                <button class="call">Call Anytime</button>
+                <button class="email">Email Today</button>
+                <div id="result"></div>
+                <div class="contact"></div>
+            </div>
+
+        </div>
     </div>
-   
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -63,6 +100,7 @@
 <script src="./js/ldtxt.js"></script>
 <script src="./js/content.js"></script>
 <script>
-	if( !window.jQuery ) document.write('<script src="./js/jquery-3.0.0.min.js"><\/script>');
+    if (!window.jQuery) document.write('<script src="./js/jquery-3.0.0.min.js"><\/script>');
 </script>
+
 </html>
