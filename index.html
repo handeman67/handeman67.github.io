@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="./css/new.css">    -->
     <link rel="stylesheet" href="./css/syle.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
 
@@ -69,7 +70,7 @@
                   </div> -->
             <section id="home" class="body">
                 <span class="header">
-                    <h1>Section one</h1>
+                    <h1>Handeman67</h1>
                 </span>
                 <div id="homeresult"></div>
                 <div class="mainhero">
@@ -78,7 +79,7 @@
             </section>
             <section id="coding" class="body">
                 <span class="header">
-                    <h1>Section two</h1>
+                    <h1>Coding</h1>
                 </span>
                 <div id="codingresult">
                     <div class="embedwrap">
@@ -123,13 +124,35 @@
             </section>
             <section id="construction" class="body">
                 <span class="header">
-                    <h1>Section three</h1>
+                    <h1>Construction</h1>
                 </span>
-                <div id="constructionresult"></div>
+                <div id="constructionresult">
+                    <div class="gallery">
+                    <figure>
+                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                    </figure></div>
+                </div>
             </section>
             <section id="creative" class="body">
                 <span class="header">
-                    <h1>Section four</h1>
+                    <h1>Creative</h1>
                 </span>
                 <div id="creativeresult">
                     <div class="gallery">
@@ -160,7 +183,20 @@
                 <span class="header">
                     <h1>Section five</h1>
                 </span>
-                <div id="fourresult"></div>
+                <style>
+                    dialog::backdrop {background-color: salmon;}
+                </style>
+                <button id="showDialogBtn">Show a dialog</button>
+                <div id="fourresult">
+                    <dialog id="favDialog">
+                        <form method="dialog">
+                          <p>The background shown outside of this dialog is a backdrop.</p>
+                          <button id="confirmBtn">Close the dialog</button>
+                        </form>
+                      </dialog>
+                      
+
+                </div>
             </section>
             <section id="five" class="body">
                 <span class="header">
@@ -181,6 +217,9 @@
         </div>
     </div>
 </body>
+<script>
+    showDialogBtn.addEventListener('click', () => favDialog.showModal());
+</script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 
 <!-- <script src="./js/index.js"></script>

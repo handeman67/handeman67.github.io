@@ -1,32 +1,4 @@
-/* width and height of the scrollbar thumb */
-.main::-webkit-scrollbar {
-    background: #888;
-    border-radius: 5px;
-    width: 5px;
-    padding-right: 1rem;
-}
 
-.main::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-    width: 5px;
-}
-
-/* background of the scrollbar track */
-.main::-webkit-scrollbar-track {
-    background: #2b2a2a;
-    width: 5px;
-}
-
-/* color of the scrollbar track on hover */
-.main::-webkit-scrollbar-track:hover {
-    background: #636363;
-}
-
-/* color of the scrollbar thumb on hover */
-.main::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
 
 body {
     --border: #cacacc;
@@ -89,6 +61,8 @@ body * {
     display: grid;
     place-content: center;
     border: red;
+    /* z-index:-1; */
+    min-height: 100%;
 }
 #menueCheck{
     display: none;
@@ -106,6 +80,7 @@ body * {
     top: 1rem;
 width: 3rem;
 height: 3rem;
+z-index:100;
 }
 input[type="checkbox"]:checked + label:after{
     content:' \205D' ;
@@ -138,7 +113,6 @@ transform:scale(1.1)
 
 .menue {
     
-
     display: flex;
     width:94vw;
     flex-direction: row;
@@ -178,8 +152,9 @@ transform:scale(1.1)
     grid-column: 2 / span 2;
     box-shadow:inset 1px 1px 5px 2px #000,1px 1px 15px 2px #0005;
     overflow: scroll;
-    transition: left 1s ease;
+    transition: all 1s ease;
     border: 5px solid transparent;
+    /* scrollbar-color: var(--bckground) var(--btn); */
 }
 
 .mainhero {
@@ -203,8 +178,7 @@ transform:scale(1.1)
 
     width: 100%;
     height: auto;
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 200px
     
 }
 .button {
@@ -243,10 +217,11 @@ transform:scale(1.1)
 
 .three {}
 #codingresult,
-#creativeresult{
+#creativeresult,
+#constructionresult{
 scroll-snap-type: x mandatory;
-min-height: 100%;
-width: 100%;
+/* min-height: 100%; */
+
 overflow-x: scroll;
 }
 .embed{
@@ -254,8 +229,11 @@ overflow-x: scroll;
     width:90vw;
     max-width:600px;
     scroll-snap-align: center;
+    transform: scale(0.8);
  
 }
+/* cp_embed_wrapper */
+#construction,
 #creative,
 #coding{
 overflow: hidden;
@@ -280,6 +258,12 @@ overflow: hidden;
   
     scroll-snap-type:x mandatory;
 }
+.gallery{
+    white-space: nowrap 
+}
+figure{
+    display: inline-block;
+}
 .embed,
 .gallery figure{
     width: 600px;
@@ -287,8 +271,8 @@ overflow: hidden;
 scroll-snap-align: center;
 }
 .gallery figure img{
-    width: 100%;
-    height:100%;
+    width:100%;
+    min-height: 100%;
 }
 figcaption{
     color: khaki;
@@ -334,7 +318,8 @@ font-size: large;
 
     .body {
         padding: 2px;
-       
+       margin-top: 5rem;
+       border:1px solid red;
     }
     #header{
         left: 0;
@@ -351,12 +336,13 @@ font-size: large;
         width: 100%;
         background: #999;
     }
-    .navwrap {
+    #navwrap {
         position: absolute;
-        overflow: hidden;
+        /* overflow: hidden; */
         border: 1px solid red;
         grid-row: 1 / span 10;
         grid-column: 1 / span 2;
+        height: 80px;
     }
 
 .menue{
