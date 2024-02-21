@@ -11,16 +11,48 @@
         integrity="sha512-Zw6ER2h5+Zjtrej6afEKgS8G5kehmDAHYp9M2xf38MPmpUWX39VrYmdGtCrDQbdLQrTnBVT8/gcNhgS4XPgvEg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="./css/new.css">    -->
-    <link rel="stylesheet" href="./css/syle.css">
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./PUBLIC/css/syle.css">
+    <link rel="stylesheet" href="./PUBLIC/css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
 
 </head>
 <script>
+    let count=0;
     window.addEventListener("click", (ev) => {
 
-        console.log(ev.target);
+let ID= ev.target;
+
+
+
+        console.log(ID);
+        if(ID.getAttribute("data-id")){
+            return console.log("Data",ID.dataset);
+        }else{
+             if(ID.id){
+           ID.setAttribute("data-id", ID.id);
+           document.body.style.setProperty("--id",ID.id)
+           console.log("id",ID.id);
+           console.log("tag",ID.tagName);
+
+        }else {
+let clss=ID.classList;
+
+if(clss.length>=2){
+    console.log("clss",clss.length);
+    ID.setAttribute("data-id",ID.tagName+count);
+    document.body.style.setProperty("--id",ID.tagName+count);
+    count++; 
+}else{
+   ID.setAttribute("data-id", clss); 
+   document.body.style.setProperty("--id",clss);
+}
+
+
+        }
+        }
+     
+      
     })
     function _(a) { return document.querySelector(a) }
     function opnMenue() {
@@ -32,7 +64,7 @@
 
         return open;
 
-
+   
     }
 
 
@@ -40,25 +72,25 @@
 
 <body><!-- onload="loadNav()" -->
     <div id="mainWrap" class="">
-        <div id="header"><input id="menueCheck" type="checkbox" checked><label class="menuecontainer" for="menueCheck"
+        <div id="header"><input id="menueCheck" type="checkbox" checked><label id="menuecontainer"class="menuecontainer" for="menueCheck"
                 onclick="opnMenue()">
 
 
             </label>
             <div id="navwrap" class="nav hamburger">
 
-                <ul class="menue">
-                    <li class="navButton"><a class="home button" href="#home">home</a>
+                <ul id="menue" class="menue">
+                    <li id="hm"class="navButton"><a class="home button" href="#home">home</a>
                     </li>
-                    <li class="navButton"><a class="codding button " href="#coding">Coding</a>
+                    <li id="cd"class="navButton"><a class="coding button " href="#coding">Coding</a>
                     </li>
-                    <li class="navButton"><a class="construction button" href="#construction">
+                    <li id="cst"class="navButton"><a class="construction button" href="#construction">
                             Contructrion</a></li>
-                    <li class="navButton"><a class="creative button" href="#creative">Creative</a>
+                    <li id="ctv"class="navButton"><a class="creative button" href="#creative">Creative</a>
                     </li>
-                    <li class="navButton"><a class="four button" href="#four">four</a>
+                    <li id="four"class="navButton"><a class="four button" href="#four">four</a>
                     </li>
-                    <li class="navButton"><a class="five button" href="#five">five</a>
+                    <li id="five"class="navButton"><a class="five button" href="#five">five</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +106,7 @@
                 </span>
                 <div id="homeresult"></div>
                 <div class="mainhero">
-                    <div class="mainImage"><img class="img" src="./img/mainimage.jpg" alt=""> </div>
+                    <div class="mainImage"><img class="img" src="./PUBLIC/assets/mainimage.jpg" alt=""> </div>
                 </div>
             </section>
             <section id="coding" class="body">
@@ -84,41 +116,62 @@
                 <div id="codingresult">
                     <div class="embedwrap">
                         <div class="embed">
-                            <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="js,result"
+                            <div class="codepen"  data-theme-id="dark" data-default-tab="result"
+                                data-slug-hash="vYNxNvd" data-editable="true" data-user="handeman67">
+                             
+                            </div>
+
+                        </div>
+                        <div class="embed">
+                            <p class="codepen" data-theme-id="dark" data-default-tab="result"
+                                data-slug-hash="xxqpZeW" data-editable="true" data-user="handeman67">
+                              
+                            </p>
+
+                        </div>
+                        <div class="embed">
+                            <p class="codepen" data-theme-id="dark" data-default-tab="result"
+                                data-slug-hash="bGLayMZ" data-editable="true" data-user="handeman67">
+                               
+                            </p>
+
+                        </div>
+                        <div class="embed">
+                            <p class="codepen"  data-theme-id="dark" data-default-tab="result"
                                 data-slug-hash="XWGoode" data-editable="true" data-user="handeman67">
-                                <span>See the Pen <a href="https://codepen.io/handeman67/pen/XWGoode">
-                                        Neomorphic progress bar</a> by Handeman67 (<a
-                                        href="https://codepen.io/handeman67">@handeman67</a>)
-                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                               
                             </p>
-                            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
                         </div>
                         <div class="embed">
-                            <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="js,result"
+                            <p class="codepen"  data-theme-id="dark" data-default-tab="result"
                                 data-slug-hash="WNmajzW" data-editable="true" data-user="handeman67">
-                                <span>See the Pen <a href="https://codepen.io/handeman67/pen/WNmajzW">
-                                        YA..working Leap year/ cpc</a> by Handeman67 (<a
-                                        href="https://codepen.io/handeman67">@handeman67</a>)
-                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                          
                             </p>
-                            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
                         </div>
                         <div class="embed">
-                            <p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="js,result"
+                            <p class="codepen"  data-theme-id="dark" data-default-tab="result"
                                 data-slug-hash="qBLzjYN" data-editable="true" data-user="handeman67">
-                                <span>See the Pen <a href="https://codepen.io/handeman67/pen/qBLzjYN">
-                                        Typing script</a> by Handeman67 (<a
-                                        href="https://codepen.io/handeman67">@handeman67</a>)
-                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                         
+                            </p>
+
+                        </div>
+                        <div class="embed">
+                            <p class="codepen"  data-theme-id="dark" data-default-tab="result"
+                                data-slug-hash="BaMJMRa" data-editable="true" data-user="handeman67">
+                           
+                            </p>
+
+                        </div>
+                        <div class="embed">
+                            <p class="codepen"  data-theme-id="dark" data-default-tab="result"
+                                data-slug-hash="YzdgyMB" data-editable="true" data-user="handeman67">
+                        
                             </p>
                             <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                         </div>
-                        <div class="embed">
-
-                        </div>
-                        <div class="embed">
-
-                        </div>
+                        <div class="embed"></div>
                     </div>
                 </div>
             </section>
@@ -128,26 +181,27 @@
                 </span>
                 <div id="constructionresult">
                     <div class="gallery">
-                    <figure>
-                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
-                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
-                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
-                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
-                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
-                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-                    </figure></div>
+                        <figure>
+                            <img src="./PUBLIC/img/" alt="Trulli" style="width:100%">
+                            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./PUBLIC/assets/background1.png" alt="Trulli" style="width:100%">
+                            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./PUBLIC/assets/background1.png"  alt="Trulli" style="width:100%">
+                            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./PUBLIC/assets/background1.png" alt="Trulli" style="width:100%">
+                            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./PUBLIC/assets/background1.png"  alt="Trulli" style="width:100%">
+                            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
             <section id="creative" class="body">
@@ -157,23 +211,23 @@
                 <div id="creativeresult">
                     <div class="gallery">
                         <figure>
-                            <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                            <img src="./PUBLIC/assets/background1.png"  alt="Trulli" style="width:100%">
                             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
                         </figure>
                         <figure>
-                            <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                            <img src="./PUBLIC/assets/background1.png"  alt="Trulli" style="width:100%">
                             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
                         </figure>
                         <figure>
-                            <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                            <img src="./PUBLIC/assets/background1.png"  alt="Trulli" style="width:100%">
                             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
                         </figure>
                         <figure>
-                            <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                            <img src="./PUBLIC/assets/background1.png"  alt="Trulli" style="width:100%">
                             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
                         </figure>
                         <figure>
-                            <img src="./img/Hammer-and-Nails.jpg" alt="Trulli" style="width:100%">
+                            <img src="./PUBLIC/assets/background1.png" alt="Trulli" style="width:100%">
                             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
                         </figure>
                     </div>
@@ -184,18 +238,41 @@
                     <h1>Section five</h1>
                 </span>
                 <style>
-                    dialog::backdrop {background-color: salmon;}
+                    dialog::backdrop {
+                        background-color: var(--border);
+                    }
                 </style>
                 <button id="showDialogBtn">Show a dialog</button>
                 <div id="fourresult">
                     <dialog id="favDialog">
-                        <form method="dialog">
-                          <p>The background shown outside of this dialog is a backdrop.</p>
-                          <button id="confirmBtn">Close the dialog</button>
-                        </form>
-                      </dialog>
-                      
+                        <fieldset>
+                            <legend>Longitude & Latitude</legend>
+                            <form method="dialog">
+                                <p>The background shown outside of this dialog is a backdrop.</p>
+                                <button on loaded="getLocation()"id="confirmBtn">Close the dialog</button>
 
+                                <h2>longitude :</h2><span class="long"></span>
+                                <h2>latitude :</h2><span class="lat"></span>
+
+
+                            </form>
+                        </fieldset>
+
+                    </dialog>
+
+<style>
+    form *{
+        padding:5px;
+        background-color: var(--bckground)
+    }
+    fieldset{
+        padding:1rem;
+        margin: 0px auto;
+        height:50vh;
+        width: 100%;
+    }
+   
+</style>
                 </div>
             </section>
             <section id="five" class="body">
@@ -216,9 +293,38 @@
 
         </div>
     </div>
+
+
 </body>
 <script>
     showDialogBtn.addEventListener('click', () => favDialog.showModal());
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(position => {
+            let lat,long,acc,spd,hdg;
+            console.log(
+               long= position.coords.longitude,
+               lat= position.coords.latitude,
+               acc= position.coords.accuracy,
+               spd= position.coords.speed,
+               hdg= position.coords.heading,
+            )
+            getLocation(lat,long);
+        })
+        console.log("geolocation availible");
+    } else {
+        console.log("geolocation not-availible");
+    }
+    function getLocation(a,b){
+let long=_(".long");
+let lat=_(".lat");
+lat.innerHTML=a;
+long.innerHTML=b;
+
+}
+
+</script>
+<script>
+   
 </script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 

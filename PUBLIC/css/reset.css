@@ -24,10 +24,14 @@
     color: #000;
 }
 
+
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--bckground)linear-gradient(to left,var(--shadow),var(--btn),var(--border),var(--btn),var(--shadow));
     border-radius: 5px;
     width: 5px;
+}
+::-webkit-scrollbar-horizontal-thumb {
+    background: var(--bckground)linear-gradient(to top,var(--shadow),var(--btn),var(--border),var(--btn),var(--shadow));
 }
 ::-webkit-scrollbar-start,
 ::-webkit-scrollbar-end{
