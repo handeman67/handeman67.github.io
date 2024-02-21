@@ -1,10 +1,10 @@
 :root {
     --id: '';
-   
+
 }
 
 body {
-    --background:var(--rad);
+    --background: var(--rad);
     --border: #95959592;
     --bckground: #706c6c;
     --shadow: #444444;
@@ -19,9 +19,9 @@ body {
     overflow: hidden;
     transition: scroll 1s ease-in-out;
 
-    --Linear:linear-gradient(to left,var(--shadow),var(--btn),var(--border),var(--btn),var(--shadow));
+    --Linear: linear-gradient(to left, var(--shadow), var(--btn), var(--border), var(--btn), var(--shadow));
 
-    --rad:radial-gradient(var(--background),var(--btn),var(--shadow));
+    --rad: radial-gradient(var(--background), var(--btn), var(--shadow));
 }
 
 body * {
@@ -94,8 +94,8 @@ body * {
     position: absolute;
     display: none;
     place-content: center;
-    color: var(--border);
-    background:var(--rad);
+     color: #cc0;
+    background: var(--rad);
     border-radius: 50%;
     filter: drop-shadow(0 0 1px #000);
     text-shadow: 1px 1px 0px #000;
@@ -111,7 +111,7 @@ body * {
 input[type="checkbox"]:checked+label:after {
     content: ' \25A4';
     filter: drop-shadow(0 0 0px #000);
-
+color: var(--border);
 }
 
 .menuecontainer:hover {
@@ -215,9 +215,11 @@ input[type="checkbox"]:checked+label:after {
     height: auto;
     min-width: 200px
 }
-button{
-    background: var(--bckground)linear-gradient(to top,var(--shadow),var(--btn),var(--border),var(--btn),var(--shadow));
+
+button {
+    background: var(--bckground)linear-gradient(to top, var(--shadow), var(--btn), var(--border), var(--btn), var(--shadow));
 }
+
 .button {
     position: relative;
     width: 100%;
@@ -256,7 +258,7 @@ button{
     font-size: 2rem;
     text-align: center;
     padding: 0.5rem;
-   
+
 }
 
 .one {}
@@ -302,14 +304,14 @@ button{
 }
 
 .cp_embed_wrapper iframe {
- 
+
     box-sizing: border-box;
     align-self: center;
     justify-content: center;
     border: 2px solid;
     margin: 0em 0;
     height: 100vh;
-    max-height:400px;
+    max-height: 400px;
     padding: 0em;
 
 }
@@ -405,7 +407,7 @@ figcaption {
         padding: 0;
         left: 0;
         right: 0;
-       
+
     }
 
     #header ul {
@@ -416,15 +418,16 @@ figcaption {
 
     .navButton {
         width: 100%;
-        background: #999;
+        padding: 0px;
+        background: var(--border);
     }
 
     #navwrap {
         position: absolute;
-        display: inline-block;
         /* overflow: hidden; */
-        border: 1px solid red;
-     
+      
+        left: 0;
+        top: -1em;
         height: 80px;
     }
 
