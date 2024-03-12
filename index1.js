@@ -4,7 +4,7 @@ const app = express();
 app.listen(3000,()=>console.log("conected  port:3000"));
 app.use(express.static("PUBLIC", "index.html"));
 
-
+function _(a) { return document.querySelector(a) }
 
 
 
