@@ -260,7 +260,19 @@ button {
     padding: 0.5rem;
 
 }
-
+#fourresult h1{font-size: 2rem};
+#fourresult h2{font-size: 1.6rem};
+#fourresult h3{font-size: 1.3rem};
+#fourresult h4{font-size: 1rem};
+#fourresult h5{font-size: 0.8rem};
+dialog::backdrop {
+   background-color: var(--border);
+}
+#fourresult{
+   max-height: 70vh;
+   overflow-y: auto;
+   margin-bottom: 5rem;
+}
 .one {}
 
 .two {}
