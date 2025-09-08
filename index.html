@@ -11,66 +11,14 @@
         integrity="sha512-Zw6ER2h5+Zjtrej6afEKgS8G5kehmDAHYp9M2xf38MPmpUWX39VrYmdGtCrDQbdLQrTnBVT8/gcNhgS4XPgvEg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="./css/new.css">    -->
+    <link rel="stylesheet" href="./PUBLIC/css/reset.css"> 
     <link rel="stylesheet" href="./PUBLIC/css/syle.css">
-    <link rel="stylesheet" href="./PUBLIC/css/reset.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
 
 </head>
-<script>
-    let count = 0;
-    window.addEventListener("click", (ev) => {
 
-        let ID = ev.target;
-
-
-
-        console.log(ID);
-        if (ID.getAttribute("data-id")) {
-            return console.log("Data", ID.dataset);
-        } else {
-            if (ID.id) {
-                ID.setAttribute("data-id", ID.id);
-                document.body.style.setProperty("--id", ID.id)
-                console.log("id", ID.id);
-                console.log("tag", ID.tagName);
-
-            } else {
-                let clss = ID.classList;
-
-                if (clss.length >= 2) {
-                    console.log("clss", clss.length);
-                    ID.setAttribute("data-id", ID.tagName + count);
-                    document.body.style.setProperty("--id", ID.tagName + count);
-                    count++;
-                } else {
-                    ID.setAttribute("data-id", clss);
-                    document.body.style.setProperty("--id", clss);
-                }
-
-
-            }
-        }
-
-
-    })
-    function _(a) { return document.querySelector(a) }
-    function opnMenue() {
-        //      let menuebtn=_(".menuecontainer");
-        //      if(menuebtn.classList.contains("open")){
-        //         menuebtn.clasList.toggle("open");
-        //      }
-
-        let open = _("#menue").classList.toggle("open");
-
-        return open;
-
-
-    }
-
-    _("#menue").addEventListener("click", runner);
-    const runner = () => { _(".menue").classList.remove("open"); }
-</script>
 
 <body><!-- onload="loadNav()" -->
     <div id="mainWrap" class="">
@@ -82,33 +30,28 @@
             <div id="navwrap" class="nav hamburger">
 
                 <ul id="menue" class="menue" onclick="opnMenue()">
-                    <li id="hm" class="navButton"><a class="home button" href="#home">home</a>
+                    <li id="hm" class="navButton"><a class="home button" href="#home" style="text-decoration: none;">Home</a>
                     </li>
-                    <li id="cd" class="navButton"><a class="coding button " href="#coding">Coding</a>
+                    <li id="cd" class="navButton"><a class="coding button " href="#coding"style="text-decoration: none;">Coding</a>
                     </li>
-                    <li id="cst" class="navButton"><a class="construction button" href="#construction">
-                            Contructrion</a></li>
-                    <li id="ctv" class="navButton"><a class="creative button" href="#creative">Creative</a>
+                    <li id="cst" class="navButton"><a class="construction button" href="#construction"style="text-decoration: none;">
+                            Construction</a></li>
+                    <li id="ctv" class="navButton"><a class="creative button" href="#creative"style="text-decoration: none;">Creative</a>
                     </li>
-                    <li id="four" class="navButton"><a class="four button" href="#four">four</a>
-                    </li>
-                    <li id="five" class="navButton"><a class="five button" href="#five">five</a>
+                    <li id="res" class="navButton"><a class="creative button" href="#four"style="text-decoration: none;">Resume</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="main " id="homewrap">
-            <!-- <div class="header">
-            <h1>Section main</h1>
-                  </div> -->
             <section id="home" class="body">
                 <span class="header">
                     <h1>Handeman67</h1>
                 </span>
                 <div id="homeresult"></div>
                 <div class="mainhero">
-                    <div class="mainImage"><img class="img" src="./PUBLIC/assets/mainimage.jpg" alt=""> </div>
+                    <div class="mainImage"><img class="img" src="img/STEVE/headshot3.jpg" alt=""> </div>
                 </div>
             </section>
             <section id="coding" class="body">
@@ -177,9 +120,7 @@
                             <figcaption>Holloween Tic Tac Toe </figcaption>
                             <p class="codepen" data-theme-id="dark" data-default-tab="result" data-slug-hash="YzdgyMB"
                                 data-editable="true" data-user="handeman67">
-
                             </p>
-                            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                         </figure>
                         <figure class="embed">
                             <figcaption>Floor to ceiling Mahogany </figcaption>
@@ -351,7 +292,7 @@
                     <h4>Workhorse Construction, Vermont</h4>
                     <p>Part of a small crew engaged in general construction projects.</p>
                     <p>Builder / Carpenter</p>
-                    <h2>Recient Project</h2>
+                    <h2>Recent Projects</h2>
                     <h3>2023-2024</h3>
                     <p>Constructed a 3-bedroom contemporary ranch on the Birdy Ranch Golf Course Community in Show Low,
                         Arizona, demonstrating exceptional craftsmanship and project management skills. Other projects
@@ -389,11 +330,13 @@
                         <br>
                     </p>
                     <span></span>
-                </div>
+                 <br>
+                        <br>
+                        <br>
             </section>
         </div>
 
-        <div class="footer">
+       <div class="footer">
             <div class="inside">
                 <button class="call">Call Anytime</button>
                 <button class="email">Email Today</button>
@@ -403,20 +346,61 @@
 
         </div>
     </div>
+ <script>
+    let count = 0;
+    window.addEventListener("click", (ev) => {
+
+        let ID = ev.target;
 
 
-</body>
 
-<script>
+        console.log(ID);
+        if (ID.getAttribute("data-id")) {
+            return console.log("Data", ID.dataset);
+        } else {
+            if (ID.id) {
+                ID.setAttribute("data-id", ID.id);
+                document.body.style.setProperty("--id", ID.id)
+                console.log("id", ID.id);
+                console.log("tag", ID.tagName);
 
+            } else {
+                let clss = ID.classList;
+
+                if (clss.length >= 2) {
+                    console.log("clss", clss.length);
+                    ID.setAttribute("data-id", ID.tagName + count);
+                    document.body.style.setProperty("--id", ID.tagName + count);
+                    count++;
+                } else {
+                    ID.setAttribute("data-id", clss);
+                    document.body.style.setProperty("--id", clss);
+                }
+
+
+            }
+        }
+
+
+    })
+    function _(a) { return document.querySelector(a) }
+    function opnMenue() {
+        //      let menuebtn=_(".menuecontainer");
+        //      if(menuebtn.classList.contains("open")){
+        //         menuebtn.clasList.toggle("open");
+        //      }
+
+        let open = _("#menue").classList.toggle("open");
+
+        return open;
+
+
+    }
+
+    _("#menue").addEventListener("click", runner);
+    const runner = () => { _(".menue").classList.remove("open"); }
 </script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-
-<!-- <script src="./js/index.js"></script>
-<script src="./js/ldtxt.js"></script>
-<script src="./js/content.js"></script> -->
-<!-- <script>
-    if (!window.jQuery) document.write('<script src="./js/jquery-3.0.0.min.js"><\/script>');
-</script> -->
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</body>
 
 </html>

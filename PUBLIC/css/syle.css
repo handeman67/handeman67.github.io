@@ -27,9 +27,10 @@ body {
 body * {
     margin: 5px auto;
     border-radius: 5px;
-    border: 2px solid var(--border);
+    /* border: 2px solid var(--border); */
     box-shadow: 2px 2px 5px var(--shadow);
     background: var(--Linear);
+    
 }
 
 #mainWrap:after {
@@ -203,30 +204,33 @@ color: var(--border);
 }
 
 .mainImage {
-    margin: 0 auto;
-    width: 100%;
-    width: 100%;
+    display:grid;
+    place-content: center;
+    /* width: 100%; */
+    height: 80%;
     max-width: 650px;
 }
 
 .mainImage img {
-
-    width: 100%;
+margin:0 auto;
+    width: 80%;
     height: auto;
     min-width: 200px
 }
-
 button {
     background: var(--bckground)linear-gradient(to top, var(--shadow), var(--btn), var(--border), var(--btn), var(--shadow));
 }
 
 .button {
     position: relative;
+    display: grid;
+    place-content: center;
     width: 100%;
     min-height: 100%;
     background: var(--shadow);
     font-size: 2em;
     border: 1px solid yellow;
+    text-align: center;
 }
 
 .button:hover:active {
@@ -260,18 +264,23 @@ button {
     padding: 0.5rem;
 
 }
-#fourresult h1{font-size: 2rem};
-#fourresult h2{font-size: 1.6rem};
-#fourresult h3{font-size: 1.3rem};
-#fourresult h4{font-size: 1rem};
-#fourresult h5{font-size: 0.8rem};
+#fourresult h1{font-size: 2rem}
+#fourresult h2{font-size: 24px;padding: 0.5em;}
+#fourresult h3{font-size: 18px}
+#fourresult h4{font-size: 24px;padding: 1em;}
+#fourresult h5{font-size: 0.8rem}
 dialog::backdrop {
    background-color: var(--border);
 }
 #fourresult{
-   max-height: 70vh;
+   max-height: 68vh;
    overflow-y: auto;
    margin-bottom: 5rem;
+   color: bisque;
+}
+
+#fourresult :hover{
+  color: greenyellow;
 }
 .one {}
 
@@ -327,10 +336,6 @@ dialog::backdrop {
     padding: 0em;
 
 }
-
-
-.four {}
-
 .embedwrap,
 .gallery {
     margin: 2rem;
@@ -368,6 +373,9 @@ figcaption {
     text-align: center;
     text-justify: center;
     font-size: large;
+    font-weight: 600;
+    padding: 0.5em;
+
 }
 
 .five {}
@@ -417,7 +425,7 @@ figcaption {
     #header {
         margin: 0;
         padding: 0;
-        left: 0;
+        left: 0 ;
         right: 0;
 
     }
@@ -426,8 +434,10 @@ figcaption {
         flex-direction: column;
         width: 50%;
         height: 50svh;
-    }
+        text-decoration: none;
 
+    }
+   
     .navButton {
         width: 100%;
         padding: 0px;
