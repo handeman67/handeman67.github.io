@@ -435,9 +435,10 @@ figcaption {
 }
 .enlarge{
     position: absolute;
-    padding:1em;
+    /* padding:1em; */
     z-index: 1000;
     inset: 10px;
+    left: 0;
     width: 50%;
     max-height:fit-content;
     /* transform: scale(0.9); */
