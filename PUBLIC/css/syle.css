@@ -439,7 +439,7 @@ figcaption {
     z-index: 1000;
     inset: 10px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     max-height:fit-content;
     /* transform: scale(0.9); */
