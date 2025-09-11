@@ -439,8 +439,8 @@ figcaption {
     z-index: 1000;
     inset: 10px;
     left: 0;
-    width: 80%;
-    height: 70vh;
+    width: 100%;
+    height: 80vh;
     max-height:fit-content;
     /* transform: scale(0.9); */
 }
