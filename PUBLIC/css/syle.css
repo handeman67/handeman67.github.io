@@ -15,7 +15,7 @@ body {
     background: var(--rad);
     min-height: 100vh;
     scroll-behavior: smooth;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: scroll 1s ease-in-out;
 
     --Linear: linear-gradient(to left, var(--shadow), var(--btn), var(--border), var(--btn), var(--shadow));
@@ -436,11 +436,11 @@ figcaption {
 .enlarge{
     position: absolute;
     padding:1em;
-    width: 100vw;
-    min-height: 100vh;
     z-index: 1000;
-    inset: 0;
-    transform: scale(0.9);
+    inset: 10px;
+    width: 50%;
+    max-height:fit-content;
+    /* transform: scale(0.9); */
 }
 .five {}
 
