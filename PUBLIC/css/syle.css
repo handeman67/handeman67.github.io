@@ -407,7 +407,8 @@ figure {
 
 .gallery figure img {
     width: 100%;
-    min-height: 60%;
+    height:60px;
+    min-height: 100%;
 }
 .gallery figure img:hover {
     filter: drop-shadow(0 0 5px var(--shadow));
@@ -432,7 +433,15 @@ figcaption {
     padding: 0.5em;
 
 }
-
+.enlarge{
+    position: absolute;
+    padding:1em;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 1000;
+    inset: 0;
+    transform: scale(0.9);
+}
 .five {}
 
 .mainImage {}
