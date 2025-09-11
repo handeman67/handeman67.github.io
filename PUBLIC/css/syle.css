@@ -438,7 +438,7 @@ figcaption {
     /* padding:1em; */
     z-index: 1000;
     left: 0;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     max-height:fit-content;
     /* transform: scale(0.9); */
