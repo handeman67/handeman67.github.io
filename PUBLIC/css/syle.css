@@ -4,7 +4,6 @@
 }
 
 body {
-    --background: var(--rad);
     --border: #95959592;
     --bckground: #706c6c;
     --shadow: #444444;
@@ -13,7 +12,7 @@ body {
     --offset: calc(var(--offside)*2);
     --wth: calc(100vw -var(var(--offset)));
 
-    background: var(--bckground);
+    background: var(--rad);
     min-height: 100vh;
     scroll-behavior: smooth;
     overflow: hidden;
@@ -21,7 +20,7 @@ body {
 
     --Linear: linear-gradient(to left, var(--shadow), var(--btn), var(--border), var(--btn), var(--shadow));
 
-    --rad: radial-gradient(var(--background), var(--btn), var(--shadow));
+    --rad: radial-gradient(#ccc, var(--btn), var(--shadow));
 }
 
 body * {
@@ -44,7 +43,7 @@ body * {
 
 #mainWrap {
     display: grid;
-    position: fixed;
+    position: absolute;
     margin: 0;
     padding: 0;
     top: 0;
@@ -78,11 +77,12 @@ body * {
     top: 1rem;
     right: 1rem;
     margin: 1rem auto;
-    display: grid;
-    place-content: center;
-    border: 1px solid var(--border);
+    /* display: grid;
+    place-content: center; */
+    border: 2px solid var(--shadow);
     box-shadow: 0 0 5px 1px var(--shadow);
     padding: 5px;
+    height:2vh;
     /* z-index:-1; */
     min-height: 100%;
 }
@@ -98,7 +98,7 @@ body * {
      color: #cc0;
     background: var(--rad);
     border-radius: 50%;
-    filter: drop-shadow(0 0 1px #000);
+  
     text-shadow: 1px 1px 0px #000;
     font-weight: 900;
     font-size: 2rem;
@@ -139,24 +139,59 @@ color: var(--border);
     text-justify: center;
 }
 
-.menuecontainer:hover:after {}
+.menuecontainer:hover:after {
+    color: greenyellow;
+}
 
-.menue {
+#menue {
 
     display: flex;
-    width: 94vw;
+    position: relative;
+    margin:0;
+    /* width: 94vw; */
     flex-direction: row;
     align-items: space-evenly;
     justify-content: space-ev;
     list-style: none;
     flex-flow: wrap;
-    padding: var(--offside);
+    flex-grow: 1;
+    /* padding: var(--offside); */
     z-index: 800;
     transition: left 250ms ease-in;
-    background: var(--btn);
+    background: transparent;
 
 }
-
+#menue a {
+    margin:0;
+    position: relative;
+    display: grig;
+    place-content: center;
+    padding:5px;
+    border: 1px solid var(--border);
+    box-shadow: 1px 1px 5px var(--shadow);
+    text-align: center;
+    min-width: 80px;
+    /* font-size: 1.2rem; */
+    scroll-snap-align: center;
+    color: khaki;
+     background: #0006;
+}
+#menue a:hover {
+    background: var(--btn);
+    color: yellow;
+    box-shadow: 0 0 5px 2px yellow;
+    transform: scale(.95);
+    z-index: 900;
+}
+#menue a:active {
+    background: var(--shadow);
+    color: lime;
+    box-shadow:inset 0 0 15px -2px lime;
+    border: 2px solid #000;
+    transform: scale(0.9);
+    z-index: 900;
+    border-radius: 8px;
+}
 .open {
 
     left: 0;
@@ -164,14 +199,11 @@ color: var(--border);
 
 .navButton {
     display: flex;
-    width: max-content;
+    margin: 0;
+    /* width: max-content; */
     flex-grow: 1;
     text-align: center;
-    background: var(--btn);
-}
-
-.navButton a {
-    color: khaki;
+    /* background: var(--btn); */
 }
 
 .main {
@@ -197,7 +229,7 @@ color: var(--border);
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: var(--offset);
+    /* margin-top: var(--offset); */
     height: auto;
     border-radius: 5px;
 
@@ -206,9 +238,15 @@ color: var(--border);
 .mainImage {
     display:grid;
     place-content: center;
-    /* width: 100%; */
+    background-color: rgba(255, 255, 255, 0.5);
+    background: url(../assets/img/STEVE/headshot3.jpg) no-repeat center;
+    background-size: cover;
+    border:10px solid transparent;
+    backdrop-filter: blur(10px) brightness(0.8);
+    width: 100%;
     height: 80%;
     max-width: 650px;
+    min-height: 650px;
 }
 
 .mainImage img {
@@ -216,6 +254,9 @@ margin:0 auto;
     width: 80%;
     height: auto;
     min-width: 200px
+}
+.mainImage img:active{
+    display: none;
 }
 button {
     background: var(--bckground)linear-gradient(to top, var(--shadow), var(--btn), var(--border), var(--btn), var(--shadow));
@@ -242,6 +283,7 @@ button {
 
 
 .body {
+    margin: 5px;
     height: 70svh;
     padding: var(--offset);
     scroll-snap-align: center;
@@ -367,7 +409,20 @@ figure {
     width: 100%;
     min-height: 60%;
 }
+.gallery figure img:hover {
+    filter: drop-shadow(0 0 5px var(--shadow));
+    transform: scale(1.05);
+    box-shadow: 0 0 5px 2px yellow;
+    z-index: 900;
+}
+.gallery figure img:active {
+    filter: drop-shadow(0 0 5px lime);
+    transform: scale(0.9);
+    box-shadow: inset 0 0 15px -2px lime;
+    border: 2px solid #000;
+    z-index: 900;
 
+}
 figcaption {
     color: khaki;
     text-align: center;
