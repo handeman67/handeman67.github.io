@@ -440,6 +440,7 @@ figcaption {
     inset: 10px;
     left: 0;
     width: 50%;
+    height: 70vh;
     max-height:fit-content;
     /* transform: scale(0.9); */
 }
