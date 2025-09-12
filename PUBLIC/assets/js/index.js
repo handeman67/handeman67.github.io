@@ -15,20 +15,24 @@ const runner = () => {
 };
 _("#menue").addEventListener("click", runner);
 
-
 let imgs = __("img");
-console.log(imgs);
+
 imgs.forEach(ig => {
     ig.addEventListener("click", (e) => {
-        console.log(ig);
-        let newimg = document.createElement('img');
+        const mw=_("#mainWrap");
+    let newimg = document.createElement('img');
+       
+        
         newimg.src = ig.src;
         newimg.classList.add("enlarge");
-        console.log(ig, newimg);
-        _("#mainWrap").append(newimg);
+       
+            mw.append(newimg);
+        
+        mw.style.overflow="scroll";
         newimg.addEventListener("click", (e) => {
             newimg.remove();
-        })
+        });
+        
 
-    })
-})
+    });
+});
