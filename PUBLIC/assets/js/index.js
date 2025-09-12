@@ -25,7 +25,7 @@ imgs.forEach(ig => {
         newimg.src = ig.src;
         newimg.classList.add("enlarge");
         console.log(ig, newimg);
-        _("body").append(newimg);
+        _("#mainWrap").append(newimg);
         newimg.addEventListener("click", (e) => {
             newimg.remove();
         })

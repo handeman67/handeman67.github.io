@@ -15,7 +15,7 @@ body {
     background: var(--rad);
     min-height: 100vh;
     scroll-behavior: smooth;
-    /* overflow: hidden; */
+    overflow: hidden;
     transition: scroll 1s ease-in-out;
 
     --Linear: linear-gradient(to left, var(--shadow), var(--btn), var(--border), var(--btn), var(--shadow));
@@ -239,7 +239,7 @@ color: var(--border);
     display:grid;
     place-content: center;
     background-color: rgba(255, 255, 255, 0.5);
-    background: url(../assets/img/STEVE/headshot3.jpg) no-repeat center;
+    background: transparent;
     background-size: cover;
     border:10px solid transparent;
     backdrop-filter: blur(10px) brightness(0.8);
@@ -248,7 +248,9 @@ color: var(--border);
     max-width: 650px;
     min-height: 650px;
 }
-
+.mainImage:active{
+background: url(../assets/img/STEVE/headshot3.jpg) no-repeat center;
+}
 .mainImage img {
 margin:0 auto;
     width: 80%;
