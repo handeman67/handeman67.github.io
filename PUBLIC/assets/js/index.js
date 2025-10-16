@@ -19,20 +19,32 @@ let imgs = __("img");
 
 imgs.forEach(ig => {
     ig.addEventListener("click", (e) => {
-        const mw=_("#mainWrap");
-    let newimg = document.createElement('img');
-       
-        
+        const mw = _("#mainWrap");
+        let newimg = document.createElement('img'),
+            w = window.innerWidth,
+            h = window.innerHeight,
+            x = (w / 2) - (ig.width / 2),
+            y = (h / 2) - (ig.height / 2),
+            contain = document.createElement("div");
+        contain.classList.add("enlarge");
         newimg.src = ig.src;
-        newimg.classList.add("enlarge");
-       
-            mw.append(newimg);
-        
-        mw.style.overflow="scroll";
+        contain.append(newimg);
+
+
+        mw.append(contain);
+
+        mw.style.overflow = "scroll";
         newimg.addEventListener("click", (e) => {
-            newimg.remove();
+            contain.remove();
         });
-        
+
 
     });
 });
+const scrollContainer = document.querySelectorAll(".yscroll");
+scrollContainer.forEach((el) => {
+    el.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        el.scrollLeft += evt.deltaY;
+    })
+})
